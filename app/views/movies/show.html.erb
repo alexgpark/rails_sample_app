@@ -18,7 +18,25 @@
   <p>
     <%= @movie.total_gross %>
   </p>
-</article>
+
+  <h3>Cast</h3>
+  <p>
+    <%= @movie.cast %>
+  </p>
+
+  <h3>Director</h3>
+  <p>
+    <%= @movie.director %>
+  </p>
+
+  <h3>Duration</h3>
+  <p>
+    <%= @movie.duration %>
+  </p>
+
+  <h3>Image</h3>
+  <%= image_tag(@movie.image_file_name) %>
+  </article>
 
 <%= link_to("Back to Movies List", root_path) %>
 <br>

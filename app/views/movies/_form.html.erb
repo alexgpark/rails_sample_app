@@ -1,4 +1,7 @@
 <%= form_for(@movie) do |f| %>
+
+  <%= @movie.errors.full_messages.to_sentence %>
+  
   <p>
     <%= f.label :title %><br/>
     <%= f.text_field :title, autofocus: true %>
@@ -9,7 +12,7 @@
   </p>
   <p>
     <%= f.label :rating %><br/>
-    <%= f.text_field :rating, size: 5 %>
+    <%= f.select :rating, Movie::RATINGS, prompt:"Select" %>
   </p>
   <p>
     <%= f.label :released_on %><br/>
